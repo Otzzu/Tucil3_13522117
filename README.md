@@ -28,7 +28,8 @@ Word Ladder adalah teka-teki atau permainan kata yang diperkenalkan oleh Lewis C
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](./img/empty.png)
+![Example screenshot](./img/flame-earth.png)
 
 
 ## Setup
@@ -56,8 +57,8 @@ java -classpath bin ./src/Main.java
 
 
 ## Usage
-Aplikasi ini digunakan untuk mencari solusi dari permainan word ladder. Sebagai contoh misalkan terdapat permaianan word ladder dengan kata asal flame dan kata tujuan earth. Kedua kata tersebut kemudian akan dimasukka kedalam program aplikasi ini dan kemudian akan diperoleh solusi seperti yang terlihat pada gambar di bawah ini: 
-![Example screenshot](./img/screenshot.png)
+Aplikasi ini digunakan untuk mencari solusi dari permainan word ladder. Sebagai contoh misalkan terdapat permaianan word ladder dengan kata asal flame dan kata tujuan earth. Kedua kata tersebut kemudian akan dimasukka kedalam program aplikasi ini dan kemudian akan diperoleh solusi seperti yang terlihat pada gambar di bawah ini: <br>
+![Example screenshot](./img/flame-earth.png)
 
 
 ## Project Status

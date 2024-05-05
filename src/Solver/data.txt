@@ -1,5 +1,7 @@
 package src.Solver;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -25,16 +27,20 @@ public class GBFSSolver extends WordLadderSolver {
             throw new Exception("Length of the start and end word must be the same");
         }
 
-        HashSet<String> visitedCost = new HashSet<>();
+        HashMap<String, Integer> visitedCost = new HashMap<>();
         PriorityQueue<Node> queue = new PriorityQueue<>();
 
         queue.add(new Node(start, null, hammingDistance(start, end)));
-        visitedCost.add(start);
+        visitedCost.put(start, 0);
+
+        int currDepth = 0;
 
         while (!queue.isEmpty()) {
             Node currNode = queue.poll();
 
-            // queue.clear();
+            if (currDepth > visitedCost.get(currNode.word)){
+                return Collections.emptyList();
+            }
 
             if (currNode.word.equals(end)) {
 
@@ -43,14 +49,17 @@ public class GBFSSolver extends WordLadderSolver {
 
             // int count = 0;
             for (String newWord : expandWord(currNode.word)) {
-                if (!visitedCost.contains(newWord)) {
+                Integer newDepth = visitedCost.get(currNode.word) + 1;
+                if (!visitedCost.containsKey(newWord)) {
                     this.countVisited++;
                     // count++;
                     Integer newCost = hammingDistance(newWord, end);
                     queue.add(new Node(newWord, currNode, newCost));
-                    visitedCost.add(newWord);
+                    visitedCost.put(newWord, newDepth);
                 }
             }
+
+            currDepth++;
 
             // if (count == 0){
             //     return Collections.emptyList();
@@ -62,3 +71,5 @@ public class GBFSSolver extends WordLadderSolver {
 
     }
 }
+
+

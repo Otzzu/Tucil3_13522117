@@ -54,7 +54,7 @@ public class WordLadderGUI extends JFrame {
 
     private void initializeUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 400);
+        setSize(600, 600);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
