@@ -119,8 +119,12 @@ public class WordLadderGUI extends JFrame {
 
             // Formatting results with numbering
             Vector<String> formattedResult = new Vector<>();
-            for (int i = 0; i < result.size(); i++) {
-                formattedResult.add((i + 1) + ". " + result.get(i));
+            if (result.size() > 0) {
+                for (int i = 0; i < result.size(); i++) {
+                    formattedResult.add((i + 1) + ". " + result.get(i));
+                }
+            } else {
+                formattedResult.add("No solution found");
             }
 
             resultDisplay.setListData(formattedResult);

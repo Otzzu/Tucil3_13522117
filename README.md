@@ -42,7 +42,7 @@ git clone
 
 2. Masuk ke dalam root folder dari projek ini melalui terminal dengan perintah berikut
 ```
-cd path/to/
+cd path/to/Tucil3_13522117
 ```
 
 3. Compile kode program dari aplikasi ini dengan menjalankan perintah berikut pada terminal

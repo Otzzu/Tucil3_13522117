@@ -41,7 +41,6 @@ public class GBFSSolver extends WordLadderSolver {
                 return buildPath(currNode);
             }
 
-            // int count = 0;
             for (String newWord : expandWord(currNode.word)) {
                 if (!visitedCost.contains(newWord)) {
                     this.countVisited++;
@@ -51,10 +50,6 @@ public class GBFSSolver extends WordLadderSolver {
                     visitedCost.add(newWord);
                 }
             }
-
-            // if (count == 0){
-            //     return Collections.emptyList();
-            // }
 
         }
 
